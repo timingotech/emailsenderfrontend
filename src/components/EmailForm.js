@@ -70,6 +70,7 @@ const EmailForm = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 p-4">
       <h1 className="text-4xl font-bold text-gray-800 mb-8">Send Custom Email</h1>
       <div className="md:flex w-full max-w-6xl ">
+      {message && <p className="mt-4 text-lg text-center">{message}</p>}
         <form onSubmit={handleSubmit} className="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg md:mb-0 mb-5">
           <input
             type="text"
@@ -141,8 +142,7 @@ const EmailForm = () => {
           <div className="ml-4 text-xl font-semibold text-white">Sending...</div>
         </div>
       )}
-      {message && <p className="mt-4 text-lg">{message}</p>}
-    </div>
+=    </div>
   );
 };
 
