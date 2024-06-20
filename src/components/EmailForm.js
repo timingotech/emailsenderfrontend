@@ -49,7 +49,7 @@ const EmailForm = () => {
     });
 
     try {
-      await axios.post('http://localhost:8000/api/send-email/', formData, {
+      await axios.post('https://emailsenderbackend.onrender.com/api/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
