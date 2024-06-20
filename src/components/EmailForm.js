@@ -115,27 +115,7 @@ const EmailForm = () => {
             Send Email
           </button>
         </form>
-        <div className="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg ml-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Email Preview</h2>
-          <div className="border border-gray-300 p-4 rounded mb-4">
-            <h3 className="font-bold text-lg mb-2">{subject}</h3>
-            <div className="mb-4">
-              <p>{turndownService.turndown(body)}</p>
-            </div>
-            {files.map((fileWrapper, index) => (
-              <div key={index} className="mb-4">
-                <p className="font-semibold text-gray-700 mb-1">{fileWrapper.file.name}</p>
-                <p className="text-gray-600 mb-2">{fileWrapper.description}</p>
-                {fileWrapper.file.type.startsWith('image/') && (
-                  <img src={URL.createObjectURL(fileWrapper.file)} alt="Uploaded" className="max-w-full h-auto mb-4" />
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="text-gray-600">
-            <p><strong>Recipients:</strong> {recipients}</p>
-          </div>
-        </div>
+        
       </div> 
       {loading && (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
