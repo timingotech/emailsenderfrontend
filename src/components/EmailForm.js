@@ -115,7 +115,7 @@ const EmailForm = () => {
             Send Email
           </button>
         </form>
-        <div className="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg ml-4">
+        <div className="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg md:ml-4">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Email Preview</h2>
           <div className="border border-gray-300 p-4 rounded mb-4">
             <h3 className="font-bold text-lg mb-2">{subject}</h3>
